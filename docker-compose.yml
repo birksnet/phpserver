@@ -8,11 +8,11 @@ services:
         links:
           - fpm
         volumes:
-          - "./src/nginx/:/etc/nginx/conf.d/"
+          - "./app/nginx/:/etc/nginx/conf.d/"
     fpm:
         image: php:7.4-fpm
         tty: true
         volumes:
-          - "./src/php/:/var/www/html/"
+          - "./app/php/:/var/www/html/"
        
         
